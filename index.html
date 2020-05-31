@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Multi Calculadora</title>
+        <meta charset="utf-8"> 
+        <link rel = "stylesheet" href = "CSS/bootstrap.css">
+        <link rel = "stylesheet" href = "CSS/custom.css">
+        <script src = "JS/script.js"></script>
+    </head>
+    <body>
+        <div class = "container">
+            <form class = "row">
+                <fieldset class = "col-sm-12">
+                    <legend>Multi Calculadora</legend>
+                        <div id = "radios" class = "row">
+                            <div class = "col-sm-4">
+                                <input  class = "form-check-inline" id = "imc" name = "input-radio" type = "radio" onchange = "mudarTela()" checked value = "I">IMC
+                            </div>
+                            <div class = "col-sm-4">
+                                <input  class = "form-check-inline" id = "retangulo" name = "input-radio" type = "radio" onchange = "mudarTela()" value = "R">Retângulo
+                            </div>
+                            <div class = "col-sm-4">
+                                <input  class = "form-check-inline" id = "circulo" name = "input-radio" type = "radio" onchange = "mudarTela()" value = "C">Círculo
+                            </div>
+                        </div>    
+                            <div class = "row"> 
+                                <div id = "div-imc" class = "col-sm-4">
+                                    <div class = "form-group">
+                                        <label for = "peso" id = "label-peso">Peso: </label>
+                                        <input class = "form-control" name = "peso" id = "input-peso" onkeydown="controlarValores( 300, 1, 'input-peso')" 
+                                         onkeyup= "controlarValores( 300 , 1 , 'input-peso')" min="1" max="300" type = "number">
+                                    </div>
+                                    <div class = "form-group">
+                                        <label for = "altura" id = "label-altura">Altura: </label>
+                                    <input class = "form-control" name = "altura" id = "input-altura" onkeydown="controlarValores( 3, 0.5, 'input-altura')" 
+                                    onkeyup= "controlarValores( 3, 0.5, 'input-altura')" min = "0.5" max = "3" type = "number">
+                                    </div>    
+                                </div>
+                                <div id = "div-retangulo" style = "display: none;" class = "col-sm-4">
+                                    <div class = "form-group">
+                                        <label for = "base" id = "label-base">Base: </label>
+                                        <input class = "form-control" name = "base" id = "input-base" onkeydown="controlarValores( 10000, 1, 'input-base')" 
+                                        onkeyup= "controlarValores( 10000 , 1 , 'input-base')" min = "1" max = "10000" type = "number">
+                                    </div>
+                                    <div class = "form-group">
+                                        <label for = "altura" id = "label-altura-retangulo">Altura: </label>
+                                        <input class = "form-control" name = "altura" id = "input-altura-retangulo" onkeydown="controlarValores( 10000, 1, 'input-altura-retangulo')" 
+                                        onkeyup= "controlarValores( 10000 , 1 , 'input-altura-retangulo')" min = "1" max = "10000" type = "number">
+                                    </div>
+                                </div>    
+                                <div id = "div-circulo"  class = "col-sm-4" style = "display: none;">
+                                    <div class = "form-group">
+                                        <label for = "raio" id = "label-raio">Raio: </label>
+                                        <input class = "form-control" name = "raio" id = "input-raio-circulo" onkeydown="controlarValores( 10000, 1, 'input-raio-circulo')" 
+                                        onkeyup= "controlarValores( 10000 , 1 , 'input-raio-circulo')" min = "1" max = "10000" type = "number">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class = "form-group">
+                                <button type = "button" onclick= "calcular()" class="btn btn-success">Calcular</button>
+                            </div>
+                </fieldset>
+            </form>
+        </div>
+    </body>
+</html>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
