@@ -1,4 +1,4 @@
-# The project multiCalculadora
+# The project multiCalculator
 ## ***Multi calculator***
 ### This project is finished
 
